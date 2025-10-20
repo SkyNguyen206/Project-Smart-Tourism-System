@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="service-container">
+    <h2>Bản đồ du lịch</h2>
+    <p>Khám phá các điểm nổi bật trên bản đồ dưới đây</p>
+    <div class="map-wrapper">
+        {{map_html|safe}}
+    </div>
+</div>
+
+<script>
+    // Lấy các tham số từ URL hiện tại
+    const urlParams = new URLSearchParams(window.location.search)
+
+    // Chạy script khi URL chưa có tham số lat
+    if(!urlParams.has('lat')){
+        // Kiểm tra trình duyệt có hỗ trợ Geolocation không
+        if(navigator.geolocation){
+            // Nếu có, gọi hàm lấy vị trí
+            navigator.geolocation.getCurrentPosition(
+                // 1. Hàm xử lý khi thành công 
+                function(position){
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    // Tải lại trang với tọa độ mới
+                    window.location.href = '/service?lat=${lat}&lon=${lon}';
+                },
+                // 2. Hàm xử lý khi bị từ chối hay thất bại
+                function(error){
+                    console.error("Lỗi không tìm thấy vị trí: ", error.message)
+                }
+            );
+        }
+        else{
+            console.log("Trình duyệt của bạn không hỗ trợ Geolocation.");
+        }
+    }
+</script>
+
+{% endblock %}

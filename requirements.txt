@@ -1,0 +1,12 @@
+streamlit
+streamlit-carousel
+streamlit_option_menu
+Flask
+numpy
+pandas
+folium
+requests 
+folium 
+textblob 
+scikit-learn
+python-dotenv
