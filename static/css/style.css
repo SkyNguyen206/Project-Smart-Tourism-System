@@ -120,3 +120,115 @@ body {
     border-radius: 8px;
     overflow: hidden; /* Giúp bo tròn góc của bản đồ bên trong */
 }
+
+/*=== Trang Setting ==*/
+
+.user-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    display: flex;
+    gap: 30px;
+}
+
+.user-sidebar {
+    flex: 0 0 250px; /* Sidebar rộng 250px và không co giãn */
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.user-nav {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+
+.user-nav a:hover, .user-nav a.active {
+    background-color: #fce7f3;
+    color: #ef4444;
+}
+
+.user-main-content {
+    flex-grow: 1; /* Phần nội dung chính chiếm hết không gian còn lại */
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.user-form .form-group {
+    margin-bottom: 20px;
+}
+
+.user-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.user-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.form-button {
+    background-color: #ef4444;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.section-title {
+    margin-top: 40px;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 10px;
+}
+
+.trip-card {
+    background-color: #f9fafb;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    margin-top: 15px;
+}
+
+/*=== Trang Setting ===*/
+.setting-container {
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.setting-section {
+    margin-top: 40px;
+}
+
+.setting-form {
+    margin-top: 20px;
+}
